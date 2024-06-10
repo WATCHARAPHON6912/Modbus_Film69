@@ -48,7 +48,8 @@ class Modbus_Film69():
     
     def decode(self,Bytes):
         return " ".join([f"{x:02X}" for x in Bytes]) , " ({} bytes)".format(len(Bytes))
-    def send(self,hex,resopne_len=20):
+    def send(self,hex,resopne_len=20,ID=1):
+        self.instrument.address = ID
         res = self.instrument._communicate(self.encode(hex),resopne_len)
         return self.decode(res)
     def close(self):
