@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="Modbus_Film69",
-    version="0.1.0",
+    version="0.1.1",
     description="A Modbus communication module for Film69 devices",
     py_modules=["modbusFilm69"],
     install_requires=[
@@ -11,7 +11,7 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'modbus_film69=modbusFilm69:Modbus_Film69',
+            'ModbusFilm69=modbusFilm69:Modbus_Film69',
         ],
     },
     classifiers=[
