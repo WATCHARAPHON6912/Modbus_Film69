@@ -4,7 +4,7 @@ setup(
     name="Modbus_Film69",
     version="0.0.1",
     description="A Modbus communication module for Film69 devices",
-    py_modules=["ModbusFilm69"],
+    py_modules=["Modbus_Film69"],
     install_requires=[
         "pyserial",
         "minimalmodbus",
