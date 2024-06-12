@@ -32,6 +32,7 @@ class Modbus_Film69():
         return input+"{:02X} {:02X}".format(crc & 0xFF, (crc >> 8) & 0xFF)
 
     def hex_to_float(self,hex_str):
+        hex_str=hex_str.replace(" ","")
         # Ensure the hex string is exactly 8 characters long
         if len(hex_str) != 8:
             raise ValueError("Hex string must be 8 characters long")
